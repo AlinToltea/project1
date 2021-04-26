@@ -1,0 +1,21 @@
+
+<html xmlns:t ="urn:schemas-microsoft-com:time">
+<head>
+    <style> .time {behavior: url(#default#time2);} </style>
+    <?import namespace="t" implementation="#default#time2">
+</head>
+<body>
+    <h3 id="exUAIC" class="time" begin="5; exUAIC.end+2" dur="5" > Pomii Sakura din Japonia </h3>
+    <img class="time" begin="exUAIC.begin+1.5" end="exUAIC.end" src="sakura.jpg" />
+    <br />
+    <div>
+    <t:media id="video" src="./DogDog5.mp4" begin="indefinite"/>
+    <br>
+    <button onclick="video.beginElement();">START</button>
+    <br />
+    <button onclick="video.pauseElement();">PAUZA</button>
+    <br />
+    <button onclick="video.endElement();">STOP</button>
+    </div>
+</body>
+</html>

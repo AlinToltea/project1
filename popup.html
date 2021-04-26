@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup</title>
+
+<script type="text/javascript">
+    function displaymessage()
+    {
+        alert("Popup")
+    }
+    function check(browser)
+
+    {
+
+        document.getElementById("answer").value=browser
+
+    }
+    function validate()
+
+    {
+
+        var at=document.getElementById("email").value.indexOf("@")
+
+        var age=document.getElementById("age").value
+
+        var fname=document.getElementById("fname").value
+
+        submitOK="true"
+
+        if (fname.length>10)
+
+        {
+
+            alert("Numele trebuie sa contina mai putin de 10 litere")
+
+            submitOK="false"
+
+        }
+
+        if (isNaN(age)||age<1||age>40)
+
+        {
+
+            alert("Varsta trebuie sa fie intre 1 si 40")
+
+            submitOK="false"
+
+        }
+
+        if (at==-1)
+
+        {
+
+            alert("Emailul este valid")
+
+            submitOK="false"
+
+        }
+
+        if (submitOK=="false")
+
+        {
+
+            return false
+
+        }
+
+    }
+</script>
+</head>
+<body>
+<form id="contact-form" method="get" action="mailto:alintoltea@gmail.com" onsubmit="return validate()">
+    <input type="button" value="Apasa pentru popup" onclick="displaymessage()" >
+
+    <p>Ce iti place cel mai mult sa faci?:</p>
+
+
+
+        <input type="radio" name="browser" onclick="check(this.value)" value="Sa ascult muzica">Sa ascult muzica<br />
+
+        <input type="radio" name="browser" onclick="check(this.value)" value="Sa calatoresc">Sa calatoresc<br />
+
+        <input type="radio" name="browser" onclick="check(this.value)" value="Sa citessc">Sa citesc<br />
+
+        <input type="radio" name="browser" onclick="check(this.value)" value="Sa pictez">Sa pictez<br />
+
+        <br />
+
+        Ce iti place cel mai mult sa faci?: <input type="text" id="answer" size="20">
+
+    Numele: <input type="text" id="fname" size="20"><br />
+
+    Varsta ( maxim 50 ani ): <input type="text" id="age" size="20"><br />
+
+    E-mail: <input type="text" id="email" size="20"><br />
+
+    <br />
+
+    <input type="submit" value="Submit">
+
+</form>
+</body>
+</html>

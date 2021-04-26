@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return</title>
+</head>
+<script type="text/javascript">
+
+    function myfunction(txt)
+
+    {
+
+        alert(txt)
+
+    }
+
+</script>
+
+</head>
+
+<body>
+
+<form>
+
+    <input type="button"
+
+           onclick="myfunction('Buna')"
+
+           value="Buna">
+
+    <input type="button"
+
+           onclick="myfunction('Salut')"
+
+           value="Salut">
+
+</form>
+<SCRIPT LANGUAGE="JavaScript">
+    function celtofar (form)
+    {
+        form.fahrenheit.value = form.celsius.value*1.8+32
+    }
+    function fartocel (form)
+    {
+        form.celsius.value = round((form.fahrenheit.value-32)/1.8)
+    }
+</SCRIPT>
+</head>
+
+<body>
+<FORM>
+    Celsius
+    <INPUT TYPE ="text" NAME="celsius" SIZE=15
+           onkeypress ="celtofar(this.form)">
+    Fahrenheit
+    <INPUT TYPE="text" NAME="fahrenheit" SIZE=15
+           onkeypress ="fartocel(this.form)">
+</form>
+
+</body>
+
+</html>
